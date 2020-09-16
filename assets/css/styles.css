@@ -1,5 +1,6 @@
 body {
     overflow: hidden; /* Hide scrollbars */
+    background-color: lightgray;
   }
 
 .center {
@@ -7,6 +8,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.jumbotron{
+    background-color: rgb(39, 38, 38);
+    color: #468bcc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .grid{
@@ -19,8 +26,6 @@ body {
     margin: 1vw;
     height: 100vh;
     width: 50%;
-    /* display: grid;
-    grid-template-columns: repeat(1); */
 }
 .search-city-input{
     grid-template-columns: repeat(2);
@@ -39,7 +44,7 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-
+    background-color: white;
 }
 .diplay-current-weather{
     margin-top: 25px;
@@ -78,7 +83,7 @@ body {
     margin: 0;
     padding: 0;
     height: 30px;
-    width: 30px;
+    width: 35px;
     border-radius: 15%;
     font-size: 14px;
     display: flex;
