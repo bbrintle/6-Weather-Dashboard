@@ -1,6 +1,7 @@
 var fahrenheit, humidity, windSpeed, log, lat, uvURL, newCityObject, cityName;
 var cityInput = $("#city-input");
 var searchBtn = document.getElementById("searchBtn");
+var enterBtn = document.getElementById("city-input");
 var currentCityArray = [];
 
 //pulls the current weather API
@@ -154,7 +155,7 @@ function displayWeatherInfo(cityObject){
         });
 }
 
-searchBtn.addEventListener('click', function() {
+function clickTheButton(){
     //make sure there is a value in the input box, otherwise nothing will happen
     if(cityInput.val()){
         //-1 comes up when the index is not found. if -1 doea appear, else will be triggered
@@ -173,6 +174,20 @@ searchBtn.addEventListener('click', function() {
             pull5DayAPI(cityInput.val())
         }
     }else{} //do nothing
+}
+
+//when Search Button is clicked
+searchBtn.addEventListener('click', function() {
+    clickTheButton();
+});
+
+//When enter is pressed, activate search button
+enterBtn.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        searchBtn.click();
+        // clickTheButton();
+    }
 });
 
 //collect the name of the city from the city list area, and feed that city back in to have it display it all over again
