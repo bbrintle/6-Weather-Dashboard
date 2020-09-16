@@ -155,7 +155,7 @@ function displayWeatherInfo(cityObject){
         });
 }
 
-function clickTheButton(){
+function createCity(){
     //make sure there is a value in the input box, otherwise nothing will happen
     if(cityInput.val()){
         //-1 comes up when the index is not found. if -1 doea appear, else will be triggered
@@ -178,7 +178,7 @@ function clickTheButton(){
 
 //when Search Button is clicked
 searchBtn.addEventListener('click', function() {
-    clickTheButton();
+    createCity();
 });
 
 //When enter is pressed, activate search button
@@ -186,7 +186,6 @@ enterBtn.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         event.preventDefault();
         searchBtn.click();
-        // clickTheButton();
     }
 });
 
