@@ -1,3 +1,7 @@
+body {
+    overflow: hidden; /* Hide scrollbars */
+  }
+
 .center {
     margin: 0;
     display: flex;
@@ -22,7 +26,9 @@
     grid-template-columns: repeat(2);
 }
 
-
+#city-input{
+    width: 130px;
+}
 
 .city-box {
     margin-top: 5px;
@@ -61,4 +67,44 @@
 #display-forecast{
     display: flex;
     flex-direction: row;
+}
+
+#display-uv-index{
+    display: flex;
+    flex-direction: row;
+}
+
+.uv-box {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 15%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bckColorPink{
+    background-color: purple;
+    color: white;
+}
+
+.bckColorRed{
+    background-color: red;
+    color: white;
+}
+
+.bckColorOrange{
+    background-color: orange;
+}
+
+.bckColorYellow{
+    background-color: yellow;
+}
+
+
+.bckColorGreen{
+    background-color: green;
 }
