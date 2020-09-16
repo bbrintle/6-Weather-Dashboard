@@ -119,7 +119,7 @@ function displayWeatherInfo(cityObject){
 
     //set city name
     var cityText = $('#city-text');
-    cityText.text(cityObject.cityName + " (" +  moment().format('MM/DD/YYYY') + ")");
+    cityText.text(cityObject.cityName + " (" + moment().format('MM/DD/YYYY') + ")");
 
     //set city temp
     var displayTemp = $('#display-temp');
