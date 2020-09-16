@@ -37,19 +37,16 @@ function pull5DayAPI(cityName){
                 dateElement.text(getDate);
 
                 //add the weather info into a <p> tag
-                var weatherDescription = response.list[i].weather[0].description;
-                var descriptionTag = $("<p>");
-                descriptionTag.text(weatherDescription);
+                var descriptionTag = $("<img>");
+                descriptionTag.attr('src', swapCodeForIcon(response.list[i].weather[0].icon));
 
                 //add the temp info into a <p> tag
-                var forecastTemp = calcFahrenheit(response.list[i].main.temp);
                 var forecastTempTag = $("<p>");
-                forecastTempTag.text("Temp: " + forecastTemp + " °F");
+                forecastTempTag.text("Temp: " + calcFahrenheit(response.list[i].main.temp) + " °F");
 
                 //add the humidity info into a <p> tag
-                var forecastHumid = response.list[i].main.humidity;
                 var forecastHumidTag = $("<p>");
-                forecastHumidTag.text("Humidity: " + forecastHumid + "%");
+                forecastHumidTag.text("Humidity: " + response.list[i].main.humidity + "%");
                 
                 //append all the tags into the Forecast Div
                 newForecastDiv.append(dateElement, descriptionTag, forecastTempTag, forecastHumidTag);
@@ -64,6 +61,11 @@ function pull5DayAPI(cityName){
                 numOfForecastBoxes++
             }   
         });
+};
+
+function swapCodeForIcon(iconCode){
+    myURL = "http://openweathermap.org/img/wn/" + iconCode + ".png";
+    return myURL;
 };
 
 //simple function to convert Kelvin into Fahrenheit
