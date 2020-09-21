@@ -24,4 +24,4 @@
 <a href="https://bbrintle.github.io/6-Weather-Dashboard/">Weather Dashboard</a>
 <img src="./assets/images/MainView.PNG">
 <img src="./assets/images/EnteredValue.PNG">
-<img src="./assets/images/ManuEnteredValue.PNG">
+<img src="./assets/images/ManyEnteredValue.PNG">
