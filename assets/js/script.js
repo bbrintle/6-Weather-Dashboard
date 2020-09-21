@@ -26,6 +26,7 @@ function pull5DayAPI(cityName){
         url: queryURL,
         method: "GET"
         }).then(function(response) {
+            console.log(response);
             //list will post every 3 hours, need to loop every 8 to make it 1 full day rotation
             for (var i = 0; numOfForecastBoxes < 5; i += 8){
                 //create the Forecast Div Box
