@@ -169,13 +169,13 @@ function createCity(){
             newCityDiv.textContent = cityInput.val();
             newCityDiv.classList.add('city-box');
             $("#city-list").append(newCityDiv);
-
             //call the API infromation using the city name from input/box value
             pullAPI(cityInput.val())
             pull5DayAPI(cityInput.val())
         }
     }else{} //do nothing
 }
+
 
 //when Search Button is clicked
 searchBtn.addEventListener('click', function() {
