@@ -1,4 +1,4 @@
-# Weather Dashboard (Homework - 6)
+# Weather Dashboard
 
 Root folder contains:
 
