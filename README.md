@@ -41,7 +41,7 @@ JQuery
 <br>
 HTML/CSS
 <br>
-<a href="https://openweathermap.org/api">Open Wather Map (API)</a>
+<a href="https://openweathermap.org/api">Open Weather Map (API)</a>
 
 ## Authors
 This was created by Blake Brintle. 
